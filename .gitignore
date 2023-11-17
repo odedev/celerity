@@ -123,7 +123,7 @@ dist-ssr
 coverage
 *.local
 site/
-cache/
+.cache/
 workspace/
 
 # data
