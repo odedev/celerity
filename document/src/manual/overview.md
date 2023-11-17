@@ -3,57 +3,69 @@
 ## structure
 ```txt
 .
-├── fleet-app
+├── celerity-app
+│   ├── celerity-app-main
 │   ├── ...
-│   └── fleet-app-main
+│   └── pom.xml
 │
-├── fleet-common
+├── celerity-common
+│   ├── celerity-common-core
+│   ├── celerity-common-web
+│   ├── celerity-common-application
+│   ├── celerity-common-cloud
+│   ├── celerity-common-kit
+│   └── pom.xml
 │
-├── fleet-component
-│   ├── fleet-component-bpmn
-│   ├── fleet-component-clickhouse
-│   ├── fleet-component-couchbase
-│   ├── fleet-component-doris
-│   ├── fleet-component-flink
-│   ├── fleet-component-kafka
-│   ├── fleet-component-minio
-│   ├── fleet-component-mongodb
-│   ├── fleet-component-mysql
-│   ├── fleet-component-pulsar
-│   ├── fleet-component-rabbitmq
-│   └── fleet-component-redis
+├── celerity-component
+│   ├── celerity-component-bpmn
+│   ├── celerity-component-clickhouse
+│   ├── celerity-component-couchbase
+│   ├── celerity-component-doris
+│   ├── celerity-component-flink
+│   ├── celerity-component-kafka
+│   ├── celerity-component-minio
+│   ├── celerity-component-mongodb
+│   ├── celerity-component-mysql
+│   ├── celerity-component-pulsar
+│   ├── celerity-component-rabbitmq
+│   ├── celerity-component-redis
+│   └── pom.xml
 │
-├── fleet-core
-│   ├── fleet-core-auth
-│   ├── fleet-core-base
-│   ├── fleet-core-client
-│   ├── fleet-core-file
-│   ├── fleet-core-metadata
-│   ├── fleet-core-org
-│   └── fleet-core-system
+├── celerity-core
+│   ├── celerity-core-auth
+│   ├── celerity-core-base
+│   ├── celerity-core-client
+│   ├── celerity-core-file
+│   ├── celerity-core-metadata
+│   ├── celerity-core-org
+│   ├── celerity-core-organization
+│   ├── celerity-core-system
+│   ├── celerity-core-tenant
+│   ├── celerity-core-uc
+│   └── pom.xml
 │
-├── fleet-module
+├── celerity-module
 │   ├── ...
-│   ├── fleet-module-code
-│   └── fleet-module-demo
+│   ├── celerity-module-code
+│   ├── celerity-module-demo
+│   └── pom.xml
 │
-├── fleet-tool
-│   ├── fleet-tool-develop
-│   ├── fleet-tool-operate
-│   └── fleet-tool-test
+├── celerity-tool
+│   ├── celerity-tool-develop
+│   ├── celerity-tool-operate
+│   ├── celerity-tool-operate
+│   └── pom.xml
 │
 │
 ├── deploy   部署
 │
-├── doc      文档
+├── document 文档
 │
 ├── operate  运维
 │
 ├── portal   网站
 │
 ├── resource 资源
-│
-├── tool     工具
 │
 ├── CHANGELOG.md
 └── README.md
