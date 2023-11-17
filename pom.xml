@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+<!--  <parent>-->
+<!--    <groupId>org.springframework.boot</groupId>-->
+<!--    <artifactId>spring-boot-starter-parent</artifactId>-->
+<!--    <version>3.0.6</version>-->
+<!--    <relativePath/>-->
+<!--  </parent>-->
+
+  <groupId>dev.orchids</groupId>
+  <artifactId>celerity</artifactId>
+  <version>1.0.0</version>
+  <name>celerity</name>
+  <description>celerity project</description>
+  <url>https://orchids.dev</url>
+
+  <packaging>pom</packaging>
+
+  <properties>
+    <version>1.0.0</version>
+    <java.version>21</java.version>
+    <encoding>UTF-8</encoding>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <maven.compiler.encoding>${encoding}</maven.compiler.encoding>
+    <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+    <spring-boot.version>3.1.5</spring-boot.version>
+  </properties>
+
+  <modules>
+    <!-- <module>celerity-app</module>
+    <module>celerity-common</module>
+    <module>celerity-core</module>
+    <module>celerity-message</module>
+    <module>celerity-module</module>
+    <module>celerity-persistence</module>
+    <module>celerity-storage</module>
+    <module>celerity-tool</module> -->
+  </modules>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+
+  <profiles>
+    <profile>
+      <id>local</id>
+      <properties>
+        <!-- 环境标识，需要与配置文件的名称相对应 -->
+        <profiles.active>local</profiles.active>
+        <logging.level>debug</logging.level>
+      </properties>
+    </profile>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <!-- 环境标识，需要与配置文件的名称相对应 -->
+        <profiles.active>dev</profiles.active>
+        <logging.level>debug</logging.level>
+      </properties>
+      <activation>
+        <!-- 默认环境 -->
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+    <profile>
+      <id>prod</id>
+      <properties>
+        <profiles.active>prod</profiles.active>
+        <logging.level>warn</logging.level>
+      </properties>
+    </profile>
+  </profiles>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <dependencies>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <showDeprecation>true</showDeprecation>
+<!--          <showWarning>true</showWarning>-->
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+<!--        <version>3.1.1</version>-->
+        <configuration>
+<!--          <doclint>none</doclint>-->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
