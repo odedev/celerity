@@ -20,6 +20,11 @@ cd celerity-application
 cd ..
 
 
+mkdir celerity-cloud
+cd celerity-cloud
+cd ..
+
+
 mkdir doc
 cd doc
 mkdir src
