@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>dev.orchids</groupId>
+    <artifactId>celerity-component</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <artifactId>celerity-component-clickhouse</artifactId>
+  <version>1.0.0</version>
+  <name>celerity-component-clickhouse</name>
+  <description>celerity component clickhouse</description>
+
+  <packaging>jar</packaging>
+
+  <properties>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.clickhouse</groupId>
+      <!-- or clickhouse-grpc-client if you prefer gRPC -->
+      <artifactId>clickhouse-http-client</artifactId>
+      <version>0.6.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents.client5</groupId>
+      <artifactId>httpclient5</artifactId>
+      <version>5.2.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.clickhouse</groupId>
+      <artifactId>clickhouse-jdbc</artifactId>
+      <version>0.6.0</version>
+      <!-- use uber jar with all dependencies included, change classifier to http for smaller jar -->
+      <classifier>all</classifier>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.9</version>
+    </dependency>
+  </dependencies>
+
+</project>

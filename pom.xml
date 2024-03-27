@@ -46,6 +46,7 @@
     <module>celerity-component</module>
 
     <!-- <module>celerity-app</module>
+    <module>celerity-cloud</module>
     <module>celerity-core</module>
     <module>celerity-message</module>
     <module>celerity-module</module>

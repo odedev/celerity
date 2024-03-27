@@ -18,6 +18,11 @@
 
   <modules>
     <module>celerity-component-bpmn</module>
+    <module>celerity-component-clickhouse</module>
+    <module>celerity-component-couchbase</module>
+    <module>celerity-component-doris</module>
+    <module>celerity-component-flink</module>
+    <module>celerity-component-pulsar</module>
   </modules>
 
   <properties>

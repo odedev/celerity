@@ -6,13 +6,13 @@
 
   <parent>
     <groupId>dev.orchids</groupId>
-    <artifactId>celerity</artifactId>
+    <artifactId>celerity-common</artifactId>
     <version>1.0.0</version>
   </parent>
 
-  <artifactId>celerity-kit</artifactId>
-  <name>celerity-kit</name>
-  <description>Celerity kit project</description>
+  <artifactId>celerity-common-kit</artifactId>
+  <name>celerity common kit</name>
+  <description>celerity common kit project</description>
 
   <packaging>pom</packaging>
 

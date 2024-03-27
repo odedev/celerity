@@ -21,7 +21,7 @@
     <module>celerity-common-web</module>
     <!--    <module>celerity-common-application</module>-->
     <!--    <module>celerity-common-cloud</module>-->
-    <!--    <module>celerity-common-kit</module>-->
+    <module>celerity-common-kit</module>
     <!--    <module>celerity-common-domain</module>-->
   </modules>
 
